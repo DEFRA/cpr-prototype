@@ -1,44 +1,39 @@
+{% set serviceName = "Run the service administrator calculator" %}
+ 
 {% extends "layout.html" %}
-
-{% block page_title %}
-  GOV.UK prototype kit
+ 
+{% block pageTitle %}
+    {{serviceName}} prototype
 {% endblock %}
-{% block beforeContent %}
-
-  
-
-{% endblock %}
-
 {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-body account-info">
+      <div>
+          <span class="your-name" id="bannerUserName">Jamie Roberts</span><a class="account-link" href="details" id="signout-link">Sign out</a>
+      </div>
+    </div><br> 
      
 
-  <main class="govuk-main-wrapper " id="main-content" role="main">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <span class="govuk-caption-l">Functionality check 2024</span><br>
-        
-          
-
-            <h1 class="govuk-heading-xl">Bad debt provision</h1>           
-    
-    
-
-<div class="govuk-form-group">
-  <p>Percentage estimate</p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
   
-  <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
-</div>
+    <span class="govuk-caption-l">Default settings</span><br>
+    <h1 class="govuk-heading-xl">Bad debt provision</h1>           
+    <p>This is the estimated percentage of the total balance that can be written off as uncollectible - for example, if an organisation goes into administration before paying.</p>
+  
+    <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text" value="6%" inputmode="numeric">
 
-</fieldset><br><br>
+    <br><br><br>
 
-
-          <a href="communication" class="govuk-button show-continue" style="display: inline;">
-      Save and continue
-    </a>
+      <div><a href="communication-costs" class="govuk-button show-continue" style="display: inline;">
+        Continue
+    </a></div>
+    
        
-      </div>
-    </div>
-  </main>
+  </div>
+ 
 </div>
 
 

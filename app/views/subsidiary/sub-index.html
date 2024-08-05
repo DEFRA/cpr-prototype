@@ -1,0 +1,109 @@
+{% set serviceName = "Report packaging data" %}
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink ({
+text: "EPR for Packaging",
+href: "/index"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+{{serviceName}} prototype
+{% endblock %}
+
+{% block content %}
+
+<!-- OVERVIEW AND CONTACTS -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-2">
+    <h1 class="govuk-heading-l">Subsidiary
+      <span class="govuk-caption-xl">Prototypes</span>
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m govuk-!-margin-top-2">Compliance schemes</h2>
+  </div>
+</div>
+
+<!-- Cancel invited user -->
+<div class="govuk-grid-row govuk-!-margin-top-5">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full card">
+
+      <!-- TITLE -->
+      <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-2">
+      July 2024
+      </strong>
+
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+        Compliance schemes adding subsidiaries
+      </h2>
+
+      <!-- DESCRIPTION -->
+
+      <!-- VERSION • META DATA -->
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-2"></h3>
+      <p class="govuk-body govuk-!-margin-bottom-5">
+      </p>
+
+      <!-- LINK TO PROTOTYPE -->
+      <p class="govuk-body"><a href="compliance-schemes/landing-page">Compliance schemes without subsidiaries</a></p>
+      <p class="govuk-body"><a href="compliance-schemes/landing-page-2">Compliance schemes with some subsidiaries</a></p>
+      <p class="govuk-body"><a href="compliance-schemes/landing-page-3">Compliance schemes with subsidiaries upload in progress</a></p>
+      <p class="govuk-body"><a href="compliance-schemes/loading-2">Compliance schemes upload in taking longer than usual</a></p>
+      <p class="govuk-body"><a href="compliance-schemes/subs-list-pending-2">Compliance schemes with subsidiaries upload in progress and no subsidiaries</a></p>
+      <!--<p class="govuk-body"><a href="compliance-schemes/landing-page-4">Subsidiaries upload large file error (journey)</a></p> -->
+      <p class="govuk-body"><a href="compliance-schemes/guidance-1">Compliance schemes org data guidance</a></p>
+      <p class="govuk-body"><a href="compliance-schemes/fix-errors-2">Error page - subsidiaries wrong file format</a></p>
+      <p class="govuk-body"><a href="compliance-schemes/fix-errors-3">Error page - subsidiaries no file uploaded</a></p>
+      <p class="govuk-body"><a href="compliance-schemes/fix-errors-4">Error page - subsidiaries upload file too big</a></p>
+      <p class="govuk-body"><a href="compliance-schemes/fix-errors-5">Error page - subsidiaries file empty</a></p>
+      <p class="govuk-body"><a href="compliance-schemes/fix-warnings">Error page - subsidiaries uploaded some files uploaded</a></p>
+      <p class="govuk-body"><a href="compliance-schemes/fix-warnings-2.html">Error page - subsidiaries no files uploaded</a></p>
+      <p class="govuk-body"><a href="compliance-schemes/service-error.html">Error page - service error</a></p>
+   
+    
+   
+      
+      <!-- HAVE A QUESTION -->
+      <p class="govuk-body-s" style="color: #505a5f;">Got a question? Contacts: UCD Scrum 4 MVP Team.</p>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-top-5">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full card">
+
+      <!-- TITLE -->
+      <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-2">
+      July 2024
+      </strong>
+
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+        Producers adding subsidiaries
+      </h2>
+
+      <!-- DESCRIPTION -->
+
+      <!-- VERSION • META DATA -->
+      
+
+      <!-- LINK TO PROTOTYPE -->
+      <p class="govuk-body"><a href="producers/landing-page.html">Producers without subsidiaries</a></p>
+      <p class="govuk-body"><a href="producers/landing-page-2.html">Producers with some subsidiaries</a></p>
+      
+      <!-- HAVE A QUESTION -->
+      <p class="govuk-body-s" style="color: #505a5f;">Got a question? Contacts: UCD Scrum 4 MVP Team.</p>
+    </div>
+  </div>
+</div><br><br><br>
+
+
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+Small Producers
+{% endset%}
+
+{% set serviceName = "Size of your organisation" %}
+
+{% block pageTitle %}
+Size of your organisation
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form method="POST" action="self-declare-3-warning">
+      <div class="govuk-form-group govuk-!-margin-top-0">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-!-margin-bottom-5">
+            <span class="govuk-caption-l">About your organisation</span>
+            <h1 class="govuk-fieldset__heading">
+              What size is your organisation?
+            </h1>
+          </legend>
+          <div id="changed-name-hint" class="govuk-hint">
+            There are different reporting requirements, fees, and costs depending on if your organisation is classed as
+            'small' or 'large'.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="largeproducer" name="sizeorganisation" type="radio"
+                value="largeproducer">
+              <label class="govuk-label govuk-radios__label" for="largeproducer">
+                Large producer
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="smallproducer" name="sizeorganisation" type="radio"
+                value="smallproducer">
+              <label class="govuk-label govuk-radios__label" for="smallproducer">
+                Small producer
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="dontknow" name="sizeorganisation" type="radio" value="dontknow">
+              <label class="govuk-label govuk-radios__label" for="dontknow">
+                <a href="https://defra-cpr-prototype.herokuapp.com/obligation-checker/v5/start-page"> Don't know</a>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <!-- DETAILS -->
+      <details class="govuk-details govuk-!-margin-bottom-6" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            How organisation is classed as 'small' or 'large'.
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">You need to collect and report packaging data if all the following apply:</p>
+          <ol class="govuk-list govuk-list--bullet">
+            <li>you’re an individual business, subsidiary or group (but not a charity)</li>
+            <li>you have an annual turnover of £1 million or more, based on your most recent annual accounts up to 7
+              April</li>
+            <li>you were responsible for importing or supplying more than 25 tonnes of packaging to the UK market in
+              2022</li>
+            <li>you carry out any of the packaging activities</li>
+          </ol>
+          <p>Find out more about <a
+              href="https://www.gov.uk/guidance/extended-producer-responsibility-for-packaging-who-is-affected-and-what-to-do#What-you-may-need-to-do">reporting
+              requirements</a></p>
+        </div>
+      </details>
+      {{ govukButton({
+      text: "Continue"
+      })}}
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

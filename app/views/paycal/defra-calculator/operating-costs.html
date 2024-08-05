@@ -1,34 +1,37 @@
+
+{% set serviceName = "Run the service administrator calculator" %}
+ 
 {% extends "layout.html" %}
-
-{% block page_title %}
-  GOV.UK prototype kit
-{% endblock %}
+ 
 {% block beforeContent %}
+  {{ govukBackLink ({
+      text: "Back",
+      href: "javascript:history.back()"
+  }) }}
 
-  
-
+  <div class="govuk-body account-info">
+    <div>
+        <span class="your-name" id="bannerUserName">Jamie Roberts</span><a class="account-link" href="details" id="signout-link">Sign out</a>
+    </div>
+  </div>
 {% endblock %}
-
+ 
+{% block pageTitle %}
+    {{serviceName}} prototype
+{% endblock %}
 {% block content %}
 
-  <main class="govuk-main-wrapper " id="main-content" role="main">
-    <div class="govuk-grid-row">
+<div class="govuk-grid-row">
+
       <div class="govuk-grid-column-two-thirds">
-        <span class="govuk-caption-l">Functionality check 2024</span><br>
-        
-          <div class="govuk-form-group">
+        <span class="govuk-caption-l">Default settings</span><br>
 
-            <h1 class="govuk-heading-xl">
-  Operating costs
-</h1>           
-<p>
-  Default totals
-</p>
+            <h1 class="govuk-heading-xl">Operating costs</h1>
+            <p>These are your organisation's costs related to the scheme. You do not need to include setup costs here.</p>           
 
-<div class="govuk-form-group">
-  <label class="govuk-label" for="width-10">
-    England
-  </label>
+
+        <div class="govuk-form-group">
+        <label class="govuk-label" for="width-10">England</label>
 
   <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text" value="£25000.00" inputmode="numeric">
 </div>
@@ -54,16 +57,16 @@
 
 </fieldset>
 
-<br><br><br>
+<br>
 
 
           <a href="la-data" class="govuk-button show-continue" style="display: inline;">
-      Save and continue
-    </a>
+            Continue
+          </a>
        
       </div>
     </div>
-  </main>
+  
 </div>
 
 
